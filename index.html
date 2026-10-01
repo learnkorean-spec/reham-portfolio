@@ -590,13 +590,13 @@ var P=[
  {id:"auto",t:"SAP reporting automation",y:"Kerry · Accenture",s:"done",c:["ops"],face:["Excel<em>+</em>SAP","macros · formulas · trackers"],
   d:"Replaced recurring manual reports with Excel macros, formulas and trackers built over SAP extracts. Less manual work, fewer reporting errors, and the tools were adopted by the whole team.",
   m:["Team-wide","adoption"],k:["Excel automation","SAP extracts","KPI reporting"]},
- {id:"golden",t:"Golden Dragon Egypt: procurement, Korea to Cairo",y:"Nov 2017 – May 2018 · project",s:"done",c:["ops","lang"],face:["KR <em>↔</em> EG","supplier chain"],
+ {id:"golden",t:"Golden Dragon Egypt: procurement, Korea to Cairo",y:"Nov 2017 – Mar 2018 · project",s:"done",c:["ops","lang"],face:["KR <em>↔</em> EG","supplier chain"],
   d:"Ran branch operations and full-cycle procurement for a Korean trading company: sourcing suppliers in Korea and Egypt, RFQs, negotiation in Korean and English, purchase orders, customs documents and invoice checks.",
   m:["End to end","from RFQ to paid invoice"],k:["Procurement","RFQs","Purchase orders","Import docs"]},
  {id:"accenture",t:"Accenture content operations",y:"2018 – 2021",s:"done",c:["ops","lang"],face:["300–800","items a day"],
   d:"Applied content policy and compliance frameworks at high daily volume in Arabic, English and Korean, and built trackers that automated volume and quality reporting.",
   m:["95%+","quality accuracy over three years"],k:["Policy & compliance","Three languages","Quality"]},
- {id:"daeah",t:"DAEAH E&C: refinery project site",y:"Jul – Oct 2017 · project",s:"done",c:["ops","lang"],face:["30","person site team"],
+ {id:"daeah",t:"DAEAH E&C: refinery project site",y:"Jul – Nov 2017 · project",s:"done",c:["ops","lang"],face:["30","person site team"],
   d:"Ran site administration for a Korean contractor on the Egyptian Refining Company project and interpreted for Korean project management.",
   m:["Korean ↔ Arabic","site interpreting"],k:["Team leadership","Administration","Interpreting"]},
  {id:"kcc",t:"Korean–Arabic interpreting and teaching",y:"2013 – 2017 · Cairo · Budapest",s:"done",c:["lang"],wide:true,face:["2014","Korean PM meeting"],
@@ -750,7 +750,7 @@ function buildNet(){
 (function(){
   var Y0=2012,Y1=2027,tl=$('tl');function pct(y){return ((y-Y0)/(Y1-Y0)*100)+'%';}
   var lanes=[
-   ["Employed","emp",[[2017.5,2017.83,"DAEAH E&C · Jul–Oct 2017"],[2017.83,2018.42,"Golden Dragon · Nov 2017–May 2018"],[2018.45,2021.65,"Accenture"],[2021.67,2022.15,"Klivvr"],[2022.17,2025.65,"Kerry Group"],[2026.42,2026.66,"Doo Group"]]],
+   ["Employed","emp",[[2017.5,2017.88,"DAEAH E&C · Jul–Nov 2017"],[2017.88,2018.2,"Golden Dragon · Nov 2017–Mar 2018"],[2018.2,2018.54,"El Zenouki · Mar–Jul 2018"],[2018.54,2021.65,"Accenture"],[2021.67,2022.15,"Klivvr"],[2022.17,2025.65,"Kerry Group"],[2026.42,2026.66,"Doo Group"]]],
    ["Own venture","own",[[2013.17,2026.75,"Klovers, founder"]]],
    ["Freelance","free",[[2013.9,2017.45,"Interpreting & teaching"],[2025.58,2026.08,"Explore Saudi"]]],
    ["Education","edu",[[2012,2016.5,"BA, Ain Shams University"],[2026.2,2026.2,"Lovable Vibe Coding L3 Gold",1]]]
@@ -769,10 +769,11 @@ function buildNet(){
  ["06/2026 – 08/2026","Trading Support Executive","Doo Technology Singapore · Doo Group","Case investigation for a global CFD brokerage; wrote the team's SOP and knowledge base.","Remote"],
  ["08/2025 – 01/2026","Digital Project Lead","Explore Saudi","Five-language travel platform, empty domain to launch in six months.","Remote"],
  ["03/2022 – 08/2025","Order Management Representative","Kerry Group · Taste & Nutrition · GBS","Order-to-cash in SAP for 50+ accounts, ~600 orders a month at 96%+ accuracy.","Kuala Lumpur"],
- ["06/2018 – 08/2021","Content & Operations Specialist","Accenture Content Operations","300–800 items a day in three languages at 95%+ quality.","Kuala Lumpur"],
  ["09/2021 – 02/2022","Customer Service Representative","Klivvr · Egyptian fintech","Customer enquiries and account requests, resolved within policy and service standards.","Remote"],
- ["11/2017 – 05/2018","General Manager, Branch Operations & Procurement","Golden Dragon Egypt · project-based","Full-cycle procurement with Korean and Egyptian suppliers, Incoterms and import documents.","Cairo"],
- ["07/2017 – 10/2017","Administration Manager & Korean–Arabic Interpreter","DAEAH E&C · Egyptian Refining Company project · project-based","Ran site administration for a 30-person team; interpreted for Korean management.","Cairo"],
+ ["07/2018 – 08/2021","Content & Operations Specialist","Accenture Content Operations","300–800 items a day in three languages at 95%+ quality.","Kuala Lumpur"],
+ ["03/2018 – 07/2018","Interpreter Services Coordinator","El Zenouki Group · manufacturing","Korean–Arabic–English interpreting and coordination in business and technical meetings.","Cairo"],
+ ["11/2017 – 03/2018","General Manager, Branch Operations & Procurement","Golden Dragon Egypt · project-based","Full-cycle procurement with Korean and Egyptian suppliers, Incoterms and import documents.","Cairo"],
+ ["07/2017 – 11/2017","Administration Manager & Korean–Arabic Interpreter","DAEAH E&C · Egyptian Refining Company project · project-based","Ran site administration for a 30-person team; interpreted for Korean management.","Cairo"],
  ["2013 – 2017","Korean–Arabic Interpreter & Language Instructor","Korean Cultural Center Cairo · freelance","Interpreting in corporate, cultural and diplomatic settings; taught Korean and Arabic.","Cairo · Budapest"],
  ["2012 – 2016","BA, Korean & Hungarian Language and Linguistics","Ain Shams University · Faculty of Al-Alsun","Balassi Institute and Korean-Arab Society scholarships.","Cairo"]
 ].forEach(function(j){var r=el('div','job'+(j[5]?' now':''));r.appendChild(el('span','when',j[0]));var m=el('div');var h=el('h4',null,j[1]+' ');h.appendChild(el('span',null,'· '+j[2]));m.appendChild(h);m.appendChild(el('p',null,j[3]));r.appendChild(m);r.appendChild(el('span','where',j[4]));$('jobs').appendChild(r);});
