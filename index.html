@@ -25,10 +25,10 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@500&text=%D8%B1%D9%87%D8%A7%D9%85%20%D8%A7%D9%84%D8%B4%D8%B1%D9%82%D8%A7%D9%88%D9%8A&display=swap">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500&text=%EB%A0%88%ED%95%A8%20%EC%97%98%EC%83%A4%EB%A5%B4%EC%B9%B4%EC%9C%84&display=swap">
 <style>
-/* Layout: a dark operator's portfolio on four ruled columns; serif display for names and numbers, mono for evidence labels. Dark-first. */
+/* Layout: a black, white and emerald operator's portfolio on four ruled columns; serif display for names and numbers, mono for evidence labels. Dark-first. */
 :root{
-  --bg:#0e0d0b; --bg2:#12110f; --card:#171512; --card2:#1d1b18; --line:#2a2723; --line2:#3a3631;
-  --ink:#f2ede4; --soft:#cbc4b8; --mute:#8d867c; --acc:#f2a23a; --acc-ink:#1b1204; --ok:#4cc38a; --glow:rgba(242,162,58,.16);
+  --bg:#0d0d0d; --bg2:#111111; --card:#161616; --card2:#1c1c1c; --line:#2a2a2a; --line2:#3a3a3a;
+  --ink:#f2f2f0; --soft:#c8c8c5; --mute:#8a8a87; --acc:#3fb58a; --acc-ink:#04140d; --ok:#4cc38a; --glow:rgba(63,181,138,.16);
   --display:"Instrument Serif","Times New Roman",Georgia,serif;
   --body:"Hanken Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif;
   --mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
@@ -39,19 +39,19 @@
 }
 @media (prefers-color-scheme: light){
   :root:not([data-theme="dark"]){
-    --bg:#f1f0ec; --bg2:#ebe9e4; --card:#ffffff; --card2:#f7f6f3; --line:#dfdcd5; --line2:#cfcbc2;
-    --ink:#161512; --soft:#3d3a35; --mute:#6c675f; --acc:#b3630b; --acc-ink:#ffffff; --ok:#1e8e4e; --glow:rgba(179,99,11,.10);
+    --bg:#f2f2f0; --bg2:#eaeae8; --card:#ffffff; --card2:#f7f7f6; --line:#dedede; --line2:#cdcdcb;
+    --ink:#151515; --soft:#3c3c3c; --mute:#6a6a6a; --acc:#1b7d59; --acc-ink:#ffffff; --ok:#1e8e4e; --glow:rgba(27,125,89,.10);
     color-scheme:light;
   }
 }
 :root[data-theme="light"]{
-  --bg:#f1f0ec; --bg2:#ebe9e4; --card:#ffffff; --card2:#f7f6f3; --line:#dfdcd5; --line2:#cfcbc2;
-    --ink:#161512; --soft:#3d3a35; --mute:#6c675f; --acc:#b3630b; --acc-ink:#ffffff; --ok:#1e8e4e; --glow:rgba(179,99,11,.10);
+  --bg:#f2f2f0; --bg2:#eaeae8; --card:#ffffff; --card2:#f7f7f6; --line:#dedede; --line2:#cdcdcb;
+    --ink:#151515; --soft:#3c3c3c; --mute:#6a6a6a; --acc:#1b7d59; --acc-ink:#ffffff; --ok:#1e8e4e; --glow:rgba(27,125,89,.10);
   color-scheme:light;
 }
 :root[data-theme="dark"]{
-  --bg:#0e0d0b; --bg2:#12110f; --card:#171512; --card2:#1d1b18; --line:#2a2723; --line2:#3a3631;
-  --ink:#f2ede4; --soft:#cbc4b8; --mute:#8d867c; --acc:#f2a23a; --acc-ink:#1b1204; --ok:#4cc38a; --glow:rgba(242,162,58,.16);
+  --bg:#0d0d0d; --bg2:#111111; --card:#161616; --card2:#1c1c1c; --line:#2a2a2a; --line2:#3a3a3a;
+  --ink:#f2f2f0; --soft:#c8c8c5; --mute:#8a8a87; --acc:#3fb58a; --acc-ink:#04140d; --ok:#4cc38a; --glow:rgba(63,181,138,.16);
   color-scheme:dark;
 }
 *{box-sizing:border-box}
@@ -810,7 +810,7 @@ function buildNet(){
  ["06/2026 – 08/2026","Trading Support Executive","Doo Technology Singapore · Doo Group","Case investigation for a global CFD brokerage; wrote the team's SOP and knowledge base.","Remote"],
  ["08/2025 – 01/2026","Digital Project Lead","Explore Saudi","Five-language travel platform, empty domain to launch in six months.","Remote"],
  ["03/2022 – 08/2025","Order Management Representative","Kerry Group · Taste & Nutrition · GBS","Order-to-cash in SAP for 50+ accounts, ~600 orders a month at 96%+ accuracy.","Kuala Lumpur"],
- ["09/2021 – 02/2022","Customer Service Representative","Klivvr · Egyptian fintech","Customer enquiries and account requests, resolved within policy and service standards.","Remote"],
+ ["09/2021 – 02/2022","Customer Service Representative","Klivvr · Egyptian fintech","Customer enquiries and account requests, resolved within policy and service standards.","Cairo"],
  ["07/2018 – 08/2021","Content & Operations Specialist","Accenture Content Operations","300–800 items a day in three languages at 95%+ quality.","Kuala Lumpur"],
  ["03/2018 – 07/2018","Interpreter Services Coordinator","El Zenouki Group · manufacturing","Korean–Arabic–English interpreting and coordination in business and technical meetings.","Cairo"],
  ["11/2017 – 03/2018","General Manager, Branch Operations & Procurement","Golden Dragon Egypt · project-based","Full-cycle procurement with Korean and Egyptian suppliers, Incoterms and import documents.","Cairo"],
