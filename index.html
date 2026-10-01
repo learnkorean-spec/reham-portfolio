@@ -155,7 +155,7 @@ main,footer,.bar{position:relative;z-index:1}
 
 /* marquee */
 .marquee{overflow:hidden;border-block:1px solid var(--line);padding-block:1.1rem;margin-top:0;mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);position:relative;z-index:1;background:var(--bg2)}
-.track{display:flex;width:max-content;animation:roll 55s linear infinite}
+.track{display:flex;width:max-content;animation:roll 40s linear infinite}
 .track span{font-family:var(--display);font-style:italic;font-size:clamp(1.4rem,2.6vw,1.9rem);white-space:nowrap;padding-inline:1.4rem;color:var(--soft);display:flex;align-items:center;gap:2.8rem}
 .track span::after{content:"✦";font-style:normal;font-size:.8rem;color:var(--acc)}
 @keyframes roll{to{transform:translateX(-50%)}}
@@ -364,7 +364,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;
 
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
-  .track{animation:none}
+  .track{animation-duration:80s}
   .live b{animation:none}
   *{transition:none!important}
 }
