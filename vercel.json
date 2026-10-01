@@ -1,0 +1,5 @@
+{
+  "headers": [
+    { "source": "/cv/(.*)", "headers": [ { "key": "X-Robots-Tag", "value": "noindex" } ] }
+  ]
+}
