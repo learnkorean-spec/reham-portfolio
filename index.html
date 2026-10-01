@@ -577,13 +577,13 @@ var CATS=[["all","All"],["ops","Operations & O2C"],["support","Client support"],
 var P=[
  {id:"klovers",t:"Klovers: live Korean classes, built and run by me",y:"2013 – now",s:"live",c:["own","digital","lang"],img:"klovers",url:"kloversegy.com",wide:true,
   d:"My own online Korean-language academy. I run it end to end: pricing and packaging, marketing, teaching operations and the platform itself, with placement testing, levelled course paths, a free-trial booking flow with automatic alerts and an admin dashboard holding every student and session record since 2022, in Arabic and English, covered by 1,100+ automated tests.",
-  m:["200+","students in 15+ countries · 1,318 live sessions in 2022–24"],k:["Business ownership","Pricing & P&L","SEO · 19.8k Google impressions in 12 months","Supabase","Lovable"]},
+  m:["200+","students in 15+ countries · 1,318 live sessions in 2022–24"],k:["Business development","Web design","Pricing & P&L","SEO · 19.8k Google impressions in 12 months","Supabase","Lovable"]},
  {id:"kerry",t:"Kerry Group order-to-cash desk",y:"2022 – 2025",s:"done",c:["ops"],face:["600<em>/mo</em>","SAP ERP · order-to-cash"],
   d:"Owned order-to-cash in SAP for 50+ multinational food and nutrition accounts: order entry and amendments, pricing and master data, delivery scheduling, invoicing and credit notes, plus collections follow-up and cash application with finance.",
   m:["96%+","accuracy · 100% on-time on critical accounts"],k:["SAP ERP","Collections & AR","Backorders","Escalations","Training"]},
  {id:"saudi",t:"Explore Saudi: five-language travel platform",y:"2025 – 2026",s:"done",c:["digital","lang"],img:"saudi",url:"explore-saudi.com",wide:true,
   d:"Digital project lead for a luxury travel platform. Took it from an empty domain to a live site in six months: scope, timeline, vendor briefs, content and launch, then monthly performance reports to the client.",
-  m:["5","languages at launch"],k:["Project delivery","CMS","Multilingual SEO","GA4"]},
+  m:["5","languages at launch"],k:["Project delivery","Web design","CMS","Multilingual SEO","GA4"]},
  {id:"doo",t:"Trading support playbook at Doo Group",y:"Jun – Aug 2026",s:"done",c:["support"],face:["MT4<em>/</em>MT5","backend evidence"],
   d:"Investigated escalated client cases for a global CFD brokerage (execution, pricing, slippage, open positions) and answered each from backend records, tick data and journal logs. Wrote the SOP and knowledge base the team now uses for onboarding.",
   m:["20–50","escalated client cases a week"],k:["Case investigation","Escalations","SOP writing","MT4/MT5"]},
@@ -621,7 +621,7 @@ var ROLES=[
  {id:"digital",l:"Digital Projects / E-commerce",t:"Digital Projects & E-commerce",
   p:"I take web projects from an empty domain to launch and keep them measured. Explore Saudi went live in five languages in six months, and I run my own platform at kloversegy.com.",
   ch:["Five-language launch with vendors and a fixed deadline","Certified Lovable Vibe Coding L3 Gold for AI-assisted builds","Monthly performance reporting to the client"],
-  sk:["Project delivery","CMS","Multilingual SEO","GA4","Lovable"],pr:["saudi","klovers"]},
+  sk:["Project delivery","Web design","Multilingual SEO","GA4","Business development"],pr:["saudi","klovers"]},
  {id:"lang",l:"Korean / Arabic roles",t:"Korean- or Arabic-speaking roles",
   p:"Arabic is my native language, English is full professional and Korean is my degree. I have interpreted on a refinery site and at a prime-ministerial meeting, and handled content at volume in all three.",
   ch:["BA in Korean & Hungarian, Ain Shams University","Korean–Arabic interpreting in business and diplomatic settings","High-volume work in Arabic, English and Korean at Accenture"],
@@ -703,8 +703,8 @@ $('fitFilter').addEventListener('click',function(){only={label:curRole.l,ids:cur
 var SK=[
  ["o2c","Order-to-cash",["kerry","auto"]],["sap","SAP ERP",["kerry","auto"]],["proc","Procurement",["golden"]],["esc","Escalations",["kerry","doo"]],
  ["xl","Excel automation",["auto","accenture","kerry"]],["sop","SOPs & training",["kerry","doo"]],["case","Case investigation",["doo"]],
- ["pol","Policy & compliance",["accenture","doo","golden"]],["web","Web builds",["klovers","saudi"]],["seo","SEO & GA4",["saudi","klovers"]],
- ["pm","Project delivery",["saudi","daeah"]],["lead","Team leadership",["daeah","golden","klovers"]],["int","Interpreting",["kcc","daeah","golden"]],["pl","P&L & pricing",["klovers","golden"]]
+ ["pol","Policy & compliance",["accenture","doo","golden"]],["web","Web design & builds",["klovers","saudi"]],["seo","SEO & GA4",["saudi","klovers"]],
+ ["bd","Business development",["klovers","golden","saudi"]],["pm","Project delivery",["saudi","daeah"]],["lead","Team leadership",["daeah","golden","klovers"]],["int","Interpreting",["kcc","daeah","golden"]],["pl","P&L & pricing",["klovers","golden"]]
 ];
 var PN={klovers:"Klovers",kerry:"Kerry Group",saudi:"Explore Saudi",doo:"Doo Group",auto:"Reporting automation",golden:"Golden Dragon",accenture:"Accenture",daeah:"DAEAH E&C",kcc:"Interpreting work"};
 function buildNet(){
@@ -712,7 +712,9 @@ function buildNet(){
   var pos={};
   var pids=Object.keys(PN);
   pids.forEach(function(id,i){var a=-Math.PI/2+i*2*Math.PI/pids.length;pos['p:'+id]=[cx+Math.cos(a)*350,cy+Math.sin(a)*228];});
-  SK.forEach(function(s,i){var a=-Math.PI/2+(i+.5)*2*Math.PI/SK.length;pos['s:'+s[0]]=[cx+Math.cos(a)*190,cy+Math.sin(a)*128];});
+  var half=Math.ceil(SK.length/2);
+  SK.forEach(function(s,i){var col=i<half?1:-1,j=i<half?i:i-half,n=i<half?half:SK.length-half;
+    pos["s:"+s[0]]=[cx+col*140,138+j*(312/(n-1))];});
   var ge=document.createElementNS(NS,'g'),gn=document.createElementNS(NS,'g');svg.appendChild(ge);svg.appendChild(gn);
   var edges=[];
   SK.forEach(function(s){s[2].forEach(function(pid){var a=pos['s:'+s[0]],b=pos['p:'+pid];var l=document.createElementNS(NS,'line');
