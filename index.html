@@ -53,6 +53,22 @@
     p, li{ font-size:.95rem; line-height:1.55; }
   }
 </style>
+<style>
+  /* ---- display serif has a single weight: add optical weight + safe synthesis ---- */
+  :root{ font-synthesis: weight style; }
+  .hero h1, .shead h2, .cbox h2, .fit-main h3, .vfeat blockquote, .idtop .big,
+  .stat b, .face b, .cvsel h3, .metric b, .track span, .net-side h4, .lang b,
+  .pcard h3, .vcard blockquote, .scripts .en, .qmark, .brand i{
+    -webkit-text-stroke:.18px currentColor;
+    paint-order:stroke fill;
+  }
+  @media (max-width:760px){
+    .hero h1, .shead h2, .cbox h2{ -webkit-text-stroke:.42px currentColor; }
+    .net-side h4, .pcard h3, .lang b, .metric b, .scripts .en, .stat b, .face b{
+      -webkit-text-stroke:.3px currentColor;
+    }
+  }
+</style>
 </head>
 <body>
 <title>Reham Elshrkawy</title>
