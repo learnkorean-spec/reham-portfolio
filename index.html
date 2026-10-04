@@ -15,6 +15,44 @@
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Reham H. Elshrkawy","jobTitle":"Operations, Order-to-Cash & Procurement Specialist","url":"https://reham-elshrkawy.vercel.app/","email":"mailto:reham.elshrkawy@gmail.com","knowsLanguage":["Arabic","English","Korean","Hungarian"],"alumniOf":{"@type":"CollegeOrUniversity","name":"Ain Shams University, Faculty of Al-Alsun"},"sameAs":["https://www.linkedin.com/in/rehamelshrkawy","https://kloversegy.com"]}</script>
+<style>
+  /* ---- mobile layout fixes: skill network + career timeline + anchors ---- */
+  .charthint{ display:none; }
+  @media (max-width:760px){
+    html, body{ overflow-x:hidden; max-width:100%; }
+    section, [id]{ scroll-margin-top:78px; }
+
+    /* the two canvases scroll sideways: shrink them and say so */
+    .netwrap svg{ min-width:520px !important; }
+    .tlinner{ min-width:470px !important; }
+    .netwrap, .tlchart{
+      -webkit-overflow-scrolling:touch; scrollbar-width:thin;
+      mask-image:linear-gradient(to right,#000 0,#000 93%,rgba(0,0,0,.5) 100%);
+      -webkit-mask-image:linear-gradient(to right,#000 0,#000 93%,rgba(0,0,0,.5) 100%);
+    }
+    .tlchart{ padding:1rem .9rem .8rem; }
+    .lane{ grid-template-columns:4.2rem 1fr !important; gap:.5rem; height:1.7rem; }
+    .lane .mono{ font-size:.55rem; }
+    .net-side{ padding:1.1rem; }
+    .net-side h4{ font-size:1.55rem; }
+
+    .charthint{
+      display:flex; align-items:center; gap:.45rem; margin:.55rem 0 .1rem;
+      font-family:var(--mono); font-size:.6rem; letter-spacing:.14em;
+      text-transform:uppercase; color:var(--mute);
+    }
+    .charthint::before{ content:""; width:1.6rem; height:1px; background:var(--acc); }
+  }
+</style>
+<style>
+  /* mobile typography: readable micro-labels + balanced headline wrapping */
+  h1, h2, h3{ text-wrap:balance; }
+  @media (max-width:760px){
+    .mono{ font-size:.72rem; letter-spacing:.11em; }
+    .charthint{ font-size:.66rem; }
+    p, li{ font-size:.95rem; line-height:1.55; }
+  }
+</style>
 </head>
 <body>
 <title>Reham Elshrkawy</title>
@@ -492,10 +530,11 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;
     <div class="wrap">
       <div class="shead">
         <div><p class="mono"><b>03</b>Skill network</p><h2>Skills, <em>with</em> proof</h2></div>
-        <p>Each line connects a skill to the place I used it. Hover or tap a skill or a project.</p>
+        <p>Each line connects a skill to the place I used it. Tap a node (hover on desktop) to see the proof.</p>
       </div>
       <div class="netbox">
-        <div class="netwrap"><svg id="net" viewBox="0 0 820 540" role="img" aria-label="Network linking skills to the projects where they were used"></svg></div>
+        <div class="netwrap" id="netwrap"><svg id="net" viewBox="0 0 820 540" role="img" aria-label="Network linking skills to the projects where they were used"></svg></div>
+        <p class="charthint mono" id="netHint">Swipe the graph &rarr; &nbsp;tap a node for proof</p>
         <aside class="net-side" aria-live="polite">
           <p class="mono">Skill network</p>
           <h4 id="netTitle">Pick a node</h4>
@@ -513,7 +552,8 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;
         <div><p class="mono"><b>04</b>Career</p><h2>From interpreter <em>to</em> operator</h2></div>
         <p>Cairo and Budapest, then Kuala Lumpur, now working remotely: interpreting and procurement for Korean companies, then enterprise operations, with my own academy running alongside since 2013.</p>
       </div>
-      <div class="tlchart"><div class="tlinner" id="tl"></div></div>
+      <div class="tlchart" id="tlchart"><div class="tlinner" id="tl"></div></div>
+      <p class="charthint mono" id="tlHint">Swipe the timeline &rarr;</p>
       <div class="jobs" id="jobs"></div>
     </div>
   </section>
@@ -883,5 +923,22 @@ var CVS=[{k:"allround",c:"All-round",t:"Multilingual Operations Specialist",f:"R
 </script>
 
 
+
+<script>
+(function(){
+  [['netwrap','netHint'],['tlchart','tlHint']].forEach(function(pair){
+    var el=document.getElementById(pair[0]), hint=document.getElementById(pair[1]);
+    if(!el||!hint) return;
+    function upd(){
+      var over = el.scrollWidth - el.clientWidth > 8;
+      var end  = el.scrollLeft + el.clientWidth >= el.scrollWidth - 8;
+      hint.style.display = (over && !end) ? 'flex' : 'none';
+    }
+    el.addEventListener('scroll', upd, {passive:true});
+    window.addEventListener('resize', upd);
+    upd();
+  });
+})();
+</script>
 </body>
 </html>
