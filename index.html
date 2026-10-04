@@ -69,6 +69,25 @@
     }
   }
 </style>
+<style>
+  /* case study */
+  .jobs .job strong{ font-weight:600; }
+  .jobs .job p{ margin:.3rem 0 0; color:var(--mute); font-size:.92rem; line-height:1.5; }
+  .jobs .badge{ font-family:var(--mono); font-size:.6rem; letter-spacing:.12em; text-transform:uppercase;
+                color:var(--soft); border:1px solid var(--line); border-radius:999px; padding:.28rem .6rem; white-space:nowrap; }
+  .metrics{ display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:0; margin-top:1rem;
+            border:1px solid var(--line); border-radius:var(--r); background:var(--card); overflow:hidden; }
+  .metric{ padding:1.4rem 1.3rem; display:flex; flex-direction:column; gap:.35rem; }
+  .metric + .metric{ border-left:1px solid var(--line); }
+  .case-note{ display:block; margin-top:1rem; color:var(--mute); font-size:.66rem; letter-spacing:.06em;
+              line-height:1.7; text-transform:none; }
+  @media (max-width:760px){
+    .metrics{ grid-template-columns:1fr; }
+    .metric + .metric{ border-left:0; border-top:1px solid var(--line); }
+    .jobs .job{ grid-template-columns:1fr !important; gap:.45rem; }
+    .jobs .job > .badge, .jobs .job > .mono{ justify-self:start; }
+  }
+</style>
 </head>
 <body>
 <title>Reham Elshrkawy</title>
@@ -445,7 +464,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;
   <div class="wrap">
     <a class="brand" href="#top"><i>RE</i>Reham Elshrkawy</a>
     <nav class="nav" aria-label="Sections">
-      <a href="#fit">Fit check</a><a href="#work">Work</a><a href="#skills">Skills</a><a href="#career">Career</a><a href="#voices">Voices</a><a href="#cv">CV</a><a href="#contact">Contact</a>
+      <a href="#fit">Fit check</a><a href="#work">Work</a><a href="#skills">Skills</a><a href="#career">Career</a><a href="#case">Case</a><a href="#voices">Voices</a><a href="#cv">CV</a><a href="#contact">Contact</a>
     </nav>
     <div class="tools">
       <button class="pill" id="openPal" type="button">Search <kbd id="kkey">Ctrl K</kbd></button>
@@ -465,7 +484,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;
       <div>
         <div class="kicker mono"><span class="acc">Order management &amp; operations</span><span>Order-to-cash · Procurement · Client ops · Digital projects</span></div>
         <h1>Reham<span class="l2">Elshrkawy<span class="dot">.</span></span></h1>
-        <p class="lede">I kept <b>600 orders a month</b> moving through SAP at <b>96%+ accuracy</b> for 50+ multinational accounts at Kerry Group, and I have run my own academy since 2013. <b>Operations discipline and an owner's judgment, in Arabic, English and Korean.</b></p>
+        <p class="lede">I kept <b>600 orders a month</b> moving through SAP for <b>50+ multinational accounts</b> at Kerry Group, at 96%+ order accuracy, and I have run my own academy since 2013. <b>Operations discipline and an owner's judgment, in Arabic, English and Korean.</b></p>
         <div class="ctas">
           <a class="btn solid" href="#fit">Do I fit your role? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M6 13l6 6 6-6"/></svg></a>
           <a class="btn" href="#work">See the work</a><a class="btn" href="/cv/Reham_Elshrkawy_CV_AllRound.pdf" download>Download CV <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 4v12M6 11l6 6 6-6M5 20h14"/></svg></a>
@@ -574,10 +593,63 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;
     </div>
   </section>
 
+
+  <section id="case">
+    <div class="wrap">
+      <div class="shead">
+        <div><p class="mono"><b>05</b>Case study</p><h2>Live eels, <em>Egypt</em> to Korea</h2></div>
+        <p>One line I built and ran end to end for a Korean trading branch in Cairo: sourcing at Egyptian farms, CITES and health paperwork, live-cargo air freight and negotiation with Korean buyers — 100+ kg a week.</p>
+      </div>
+
+      <div class="jobs">
+        <div class="job">
+          <span class="mono">01 · Sourcing</span>
+          <div>
+            <strong>Suppliers qualified on both sides</strong>
+            <p>Identified and qualified suppliers in Egypt and Korea, agreed grading, packing and weekly volumes, and compared quotes before committing.</p>
+          </div>
+          <span class="badge">Egypt · Korea</span>
+        </div>
+        <div class="job">
+          <span class="mono">02 · Compliance</span>
+          <div>
+            <strong>CITES permits and health certificates</strong>
+            <p>Anguilla is a CITES-listed species: export permits, veterinary/health certificates and customs export documents had to be right before every shipment.</p>
+          </div>
+          <span class="badge">CITES</span>
+        </div>
+        <div class="job">
+          <span class="mono">03 · Live cargo</span>
+          <div>
+            <strong>Air freight built for live fish</strong>
+            <p>Packing and airline handling for live cargo, booked with freight forwarders, with shipment scheduling tight enough to protect survival rates on arrival.</p>
+          </div>
+          <span class="badge">Air freight</span>
+        </div>
+        <div class="job">
+          <span class="mono">04 · Commercial</span>
+          <div>
+            <strong>Price and terms in Korean</strong>
+            <p>Negotiated price, Incoterms (FOB, CIF) and lead times directly with Korean buyers in Korean and English.</p>
+          </div>
+          <span class="badge">KR · EN</span>
+        </div>
+      </div>
+
+      <div class="metrics">
+        <div class="metric"><b>100+ kg</b><span class="mono">a week, live</span></div>
+        <div class="metric"><b>≈USD 1,000</b><span class="mono">per shipment</span></div>
+        <div class="metric"><b>5 months</b><span class="mono">project-based branch role</span></div>
+      </div>
+
+      <p class="case-note mono">Market context: Egypt&#8217;s live-eel exports averaged USD 15.6/kg FOB (USD 7.6/kg to Korea) and Korean wholesale live eel trades around USD 27/kg — so a 100 kg weekly line is a genuinely high-value niche, not a volume business.</p>
+    </div>
+  </section>
+
   <section id="voices">
     <div class="wrap">
       <div class="shead">
-        <div><p class="mono"><b>05</b>Voices</p><h2>What others say</h2></div>
+        <div><p class="mono"><b>06</b>Voices</p><h2>What others say</h2></div>
         <p>From LinkedIn recommendations and a written employer reference: managers, teammates and a client.</p>
       </div>
       <article class="vfeat">
@@ -614,7 +686,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;
   <section id="cv">
     <div class="wrap">
       <div class="shead">
-        <div><p class="mono"><b>06</b>CV</p><h2>One CV per <em>role.</em></h2></div>
+        <div><p class="mono"><b>07</b>CV</p><h2>One CV per <em>role.</em></h2></div>
         <p>Same facts, ordered for what each team needs first. English, two pages, PDF.</p>
       </div>
       <div class="cvbox">
